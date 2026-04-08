@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Inlay Burmese Kitchen &mdash; Lewisville, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+--ink:#1a0f0a;--deep:#2d1510;--crimson:#8b1a1a;--gold:#c9933a;
+--pale-gold:#e8c876;--cream:#f5edd8;--warm-white:#fdf8ef;--muted:#7a6355;
+--border:rgba(201,147,58,0.25);
+--font-display:'Playfair Display',Georgia,serif;
+--font-body:'Lora',Georgia,serif;
+--font-ornament:'Cinzel',Georgia,serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{background:var(--warm-white);color:var(--ink);font-family:var(--font-body);overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.4;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes shimmer{0%,100%{opacity:0.6;}50%{opacity:1;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes rotateSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+@keyframes scrollPulse{0%,100%{transform:translateY(0);opacity:0.7;}50%{transform:translateY(6px);opacity:1;}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 3rem;background:rgba(26,15,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);animation:fadeIn 1s ease both;}
+.nav-logo{font-family:var(--font-ornament);font-size:1rem;letter-spacing:0.12em;color:var(--pale-gold);text-transform:uppercase;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;font-family:var(--font-ornament);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--cream);}
+.nav-links a{opacity:0.7;transition:opacity 0.2s,color 0.2s;}
+.nav-links a:hover{opacity:1;color:var(--pale-gold);}
+.nav-cta{font-family:var(--font-ornament);font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:0.5rem 1.25rem;transition:background 0.25s,color 0.25s;}
+.nav-cta:hover{background:var(--gold);color:var(--ink);}
+.hero{min-height:100vh;background:var(--ink);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse 80% 60% at 65% 50%,rgba(139,26,26,0.18) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 80% 20%,rgba(201,147,58,0.12) 0%,transparent 60%);}
+.hero-pattern{position:absolute;inset:0;opacity:0.06;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9933a'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:10rem 5rem 6rem 6rem;position:relative;z-index:2;}
+.hero-eyebrow{font-family:var(--font-ornament);font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;animation:fadeUp 0.8s ease 0.2s both;}
+.hero-title{font-family:var(--font-display);font-size:clamp(3.2rem,5.5vw,5.5rem);font-weight:900;line-height:1.0;color:var(--cream);margin-bottom:0.5rem;animation:fadeUp 0.8s ease 0.4s both;}
+.hero-title em{display:block;font-style:italic;color:var(--pale-gold);font-weight:400;}
+.hero-sub{font-family:var(--font-ornament);font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:2.5rem;animation:fadeUp 0.8s ease 0.55s both;}
+.hero-desc{font-size:1.05rem;line-height:1.8;color:rgba(245,237,216,0.72);max-width:440px;margin-bottom:3rem;animation:fadeUp 0.8s ease 0.7s both;}
+.hero-actions{display:flex;gap:1rem;align-items:center;animation:fadeUp 0.8s ease 0.85s both;}
+.btn-primary{font-family:var(--font-ornament);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:0.9rem 2.2rem;font-weight:600;transition:background 0.25s,transform 0.2s;display:inline-block;}
+.btn-primary:hover{background:var(--pale-gold);transform:translateY(-1px);}
+.btn-ghost{font-family:var(--font-ornament);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);padding:0.9rem 2.2rem;border:1px solid rgba(245,237,216,0.3);transition:border-color 0.25s,color 0.25s;display:inline-block;}
+.btn-ghost:hover{border-color:var(--pale-gold);color:var(--pale-gold);}
+.hero-right{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;}
+.hero-emblem{position:relative;width:480px;height:480px;animation:fadeIn 1.2s ease 0.6s both;}
+.emblem-ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(201,147,58,0.3);animation:rotateSlow 40s linear infinite;}
+.emblem-ring-2{position:absolute;inset:40px;border-radius:50%;border:1px dashed rgba(201,147,58,0.2);animation:rotateSlow 30s linear infinite reverse;}
+.emblem-center{position:absolute;inset:80px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(139,26,26,0.4) 0%,rgba(45,21,16,0.6) 60%,transparent 100%);border:1px solid rgba(201,147,58,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;}
+.emblem-icon{font-size:4rem;margin-bottom:0.5rem;animation:float 4s ease-in-out infinite;line-height:1;}
+.emblem-label{font-family:var(--font-ornament);font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);opacity:0.8;}
+.orbit-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--gold);opacity:0.6;animation:shimmer 2s ease-in-out infinite;}
+.scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:0.5rem;font-family:var(--font-ornament);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(201,147,58,0.6);animation:fadeIn 1s ease 1.5s both;}
+.scroll-arrow{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2s ease-in-out infinite;}
+.section-label{font-family:var(--font-ornament);font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.section-title{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:700;line-height:1.15;}
+.section-title em{font-style:italic;color:var(--crimson);}
+.divider-ornament{display:flex;align-items:center;gap:1rem;margin:3rem 0;}
+.divider-ornament::before,.divider-ornament::after{content:'';flex:1;height:1px;background:var(--border);}
+.divider-ornament span{font-size:1.1rem;color:var(--gold);}
+.story{background:var(--deep);padding:7rem 0;position:relative;overflow:hidden;}
+.story::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
+.story-inner{max-width:1200px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:center;}
+.story-left .section-title{color:var(--cream);}
+.story-left .section-title em{color:var(--pale-gold);}
+.story-left .section-label{color:var(--pale-gold);}
+.story-body{font-size:1.05rem;line-height:1.9;color:rgba(245,237,216,0.75);margin-top:1.5rem;}
+.story-body p+p{margin-top:1.25rem;}
+.story-stat-row{display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(201,147,58,0.15);}
+.story-stat .num{font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--pale-gold);line-height:1;}
+.story-stat .lbl{font-family:var(--font-ornament);font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(245,237,216,0.5);margin-top:0.4rem;}
+.story-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,147,58,0.15);}
+.story-card{background:rgba(45,21,16,0.9);padding:2rem;position:relative;overflow:hidden;transition:background 0.3s;}
+.story-card:hover{background:rgba(139,26,26,0.2);}
+.story-card::before{content:attr(data-n);position:absolute;top:-0.5rem;right:1rem;font-family:var(--font-display);font-size:5rem;font-weight:900;color:rgba(201,147,58,0.06);line-height:1;pointer-events:none;}
+.story-card-icon{font-size:1.8rem;margin-bottom:1rem;}
+.story-card h3{font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--pale-gold);margin-bottom:0.6rem;}
+.story-card p{font-size:0.88rem;line-height:1.7;color:rgba(245,237,216,0.6);}
+.education{background:var(--warm-white);padding:7rem 0;}
+.education-inner{max-width:1200px;margin:0 auto;padding:0 3rem;}
+.education-header{text-align:center;max-width:640px;margin:0 auto 4rem;}
+.education-header .section-title{color:var(--deep);}
+.education-header p{margin-top:1.2rem;font-size:1.05rem;line-height:1.8;color:var(--muted);}
+.flavors-wheel{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);margin-bottom:4rem;}
+.flavor-cell{padding:2.5rem 2rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden;transition:background 0.3s;}
+.flavor-cell:nth-child(3n){border-right:none;}
+.flavor-cell:nth-child(n+4){border-bottom:none;}
+.flavor-cell:hover{background:var(--cream);}
+.flavor-cell::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.4s;}
+.flavor-cell:hover::after{transform:scaleX(1);}
+.flavor-icon{font-size:2rem;margin-bottom:1rem;}
+.flavor-name{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:var(--deep);margin-bottom:0.5rem;}
+.flavor-sub{font-family:var(--font-ornament);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.flavor-desc{font-size:0.88rem;line-height:1.7;color:var(--muted);}
+.table-note{text-align:center;max-width:620px;margin:0 auto 2rem;}
+.table-note .section-title{color:var(--deep);}
+.table-note p{margin-top:1.2rem;font-size:1.05rem;line-height:1.8;color:var(--muted);}
+.menu-sec{background:var(--ink);padding:7rem 0;position:relative;overflow:hidden;}
+.menu-sec::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse 70% 50% at 20% 50%,rgba(139,26,26,0.15) 0%,transparent 70%),radial-gradient(ellipse 50% 60% at 80% 80%,rgba(201,147,58,0.08) 0%,transparent 60%);pointer-events:none;}
+.menu-inner{max-width:1200px;margin:0 auto;padding:0 3rem;}
+.menu-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;}
+.menu-header .section-label{color:var(--pale-gold);}
+.menu-header .section-title{color:var(--cream);}
+.menu-header .section-title em{color:var(--pale-gold);}
+.menu-tabs{display:flex;gap:0.25rem;flex-wrap:wrap;}
+.tab-btn{font-family:var(--font-ornament);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,237,216,0.5);background:none;border:none;padding:0.6rem 1.2rem;border-bottom:1px solid transparent;cursor:pointer;transition:color 0.2s,border-color 0.2s;}
+.tab-btn:hover{color:var(--pale-gold);}
+.tab-btn.active{color:var(--pale-gold);border-color:var(--gold);}
+.dish-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,147,58,0.12);}
+.dish-card{background:rgba(26,15,10,0.95);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s;display:none;}
+.dish-card.visible{display:block;}
+.dish-card:hover{background:rgba(45,21,16,0.95);}
+.dish-num{font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:rgba(201,147,58,0.35);letter-spacing:0.1em;margin-bottom:1.5rem;}
+.dish-name{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--cream);margin-bottom:0.3rem;line-height:1.2;}
+.dish-burmese{font-family:var(--font-ornament);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.dish-desc{font-size:0.9rem;line-height:1.75;color:rgba(245,237,216,0.6);margin-bottom:1.5rem;}
+.dish-tags{display:flex;gap:0.5rem;flex-wrap:wrap;}
+.tag{font-family:var(--font-ornament);font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;padding:0.3rem 0.7rem;border:1px solid rgba(201,147,58,0.25);color:rgba(201,147,58,0.7);}
+.dish-card-accent{position:absolute;top:0;right:0;width:3px;height:0;background:var(--gold);transition:height 0.4s;}
+.dish-card:hover .dish-card-accent{height:100%;}
+.glossary{background:var(--cream);padding:7rem 0;position:relative;}
+.glossary::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
+.glossary-inner{max-width:1200px;margin:0 auto;padding:0 3rem;}
+.glossary-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:4rem;}
+.glossary-intro{font-size:1.05rem;line-height:1.8;color:var(--muted);margin-top:1.2rem;}
+.glossary-grid{display:grid;grid-template-columns:1fr 1fr;}
+.glossary-item{padding:2rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border);transition:background 0.25s;}
+.glossary-item:nth-child(2n){border-right:none;}
+.glossary-item:nth-last-child(-n+2){border-bottom:none;}
+.glossary-item:hover{background:rgba(201,147,58,0.04);}
+.glossary-term{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--crimson);margin-bottom:0.25rem;}
+.glossary-pron{font-family:var(--font-ornament);font-size:0.6rem;letter-spacing:0.15em;color:var(--gold);margin-bottom:0.6rem;}
+.glossary-def{font-size:0.9rem;line-height:1.7;color:var(--muted);}
+.feature{background:var(--deep);padding:7rem 0;overflow:hidden;}
+.feature-inner{max-width:1200px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:1.2fr 1fr;gap:6rem;align-items:center;}
+.feature-box{background:rgba(139,26,26,0.12);border:1px solid rgba(201,147,58,0.2);padding:4rem;position:relative;}
+.feature-box::before{content:'';position:absolute;top:-1px;left:3rem;right:3rem;height:3px;background:linear-gradient(to right,transparent,var(--gold),transparent);}
+.feature-quote{font-family:var(--font-display);font-size:1.4rem;font-style:italic;line-height:1.65;color:var(--cream);}
+.feature-attr{margin-top:1.5rem;font-family:var(--font-ornament);font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(201,147,58,0.6);}
+.fcorner{position:absolute;width:30px;height:30px;border-color:rgba(201,147,58,0.4);border-style:solid;}
+.fcorner.tl{top:-1px;left:-1px;border-width:2px 0 0 2px;}
+.fcorner.tr{top:-1px;right:-1px;border-width:2px 2px 0 0;}
+.fcorner.bl{bottom:-1px;left:-1px;border-width:0 0 2px 2px;}
+.fcorner.br{bottom:-1px;right:-1px;border-width:0 2px 2px 0;}
+.feature-text .section-label{color:var(--pale-gold);}
+.feature-text .section-title{color:var(--cream);}
+.feature-text .section-title em{color:var(--pale-gold);}
+.feature-body{margin-top:1.5rem;font-size:1rem;line-height:1.85;color:rgba(245,237,216,0.7);}
+.feature-body p+p{margin-top:1rem;}
+.spotlight{margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem;}
+.sitem{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;border:1px solid rgba(201,147,58,0.15);transition:border-color 0.25s,background 0.25s;}
+.sitem:hover{border-color:rgba(201,147,58,0.4);background:rgba(201,147,58,0.05);}
+.sitem-icon{font-size:1.5rem;flex-shrink:0;}
+.sitem-name{font-family:var(--font-display);font-size:0.95rem;font-weight:600;color:var(--pale-gold);}
+.sitem-desc{font-size:0.82rem;color:rgba(245,237,216,0.5);margin-top:0.2rem;}
+.reviews{background:var(--warm-white);padding:7rem 0;}
+.reviews-inner{max-width:1200px;margin:0 auto;padding:0 3rem;}
+.reviews-header{text-align:center;margin-bottom:4rem;}
+.reviews-header .section-title{color:var(--deep);}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
+.review-card{background:var(--warm-white);padding:2.5rem 2rem;position:relative;}
+.review-stars{display:flex;gap:0.2rem;margin-bottom:1.2rem;}
+.star{color:var(--gold);font-size:0.9rem;}
+.review-text{font-size:0.92rem;line-height:1.8;color:var(--muted);font-style:italic;margin-bottom:1.5rem;}
+.review-author{display:flex;align-items:center;gap:0.75rem;}
+.author-av{width:36px;height:36px;border-radius:50%;background:var(--crimson);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--cream);flex-shrink:0;}
+.author-name{font-family:var(--font-display);font-size:0.9rem;font-weight:600;color:var(--deep);}
+.author-src{font-family:var(--font-ornament);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-top:0.15rem;}
+.review-accent{position:absolute;top:0;left:0;width:0;height:3px;background:var(--gold);transition:width 0.4s;}
+.review-card:hover .review-accent{width:100%;}
+.visit{background:var(--deep);padding:7rem 0;overflow:hidden;}
+.visit-inner{max-width:1200px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;}
+.visit-info .section-label{color:var(--pale-gold);}
+.visit-info .section-title{color:var(--cream);}
+.vdetail{display:flex;gap:1.5rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(201,147,58,0.12);}
+.vdetail+.vdetail{margin-top:1.5rem;padding-top:1.5rem;}
+.vdetail-icon{font-size:1.4rem;flex-shrink:0;margin-top:0.1rem;}
+.vdetail-label{font-family:var(--font-ornament);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;}
+.vdetail-value{font-size:0.95rem;line-height:1.7;color:rgba(245,237,216,0.8);}
+.visit-map{display:flex;flex-direction:column;gap:1.5rem;}
+.map-frame{background:rgba(45,21,16,0.5);border:1px solid var(--border);height:280px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.map-frame::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(139,26,26,0.2) 0%,rgba(26,15,10,0.5) 100%);}
+.map-ph{text-align:center;position:relative;z-index:1;}
+.map-ph .pin{font-size:3rem;display:block;margin-bottom:0.5rem;}
+.map-ph p{font-family:var(--font-ornament);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,147,58,0.7);}
+.map-link{display:block;font-family:var(--font-ornament);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:0.75rem 1.5rem;text-align:center;transition:background 0.25s,border-color 0.25s;}
+.map-link:hover{background:rgba(201,147,58,0.1);border-color:var(--gold);}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 2rem;}
+.hrow{display:flex;justify-content:space-between;font-size:0.88rem;color:rgba(245,237,216,0.65);padding:0.35rem 0;border-bottom:1px solid rgba(201,147,58,0.08);}
+.hday{font-family:var(--font-ornament);font-size:0.65rem;letter-spacing:0.1em;}
+footer{background:var(--ink);padding:4rem 3rem 3rem;border-top:1px solid rgba(201,147,58,0.15);}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:3rem;border-bottom:1px solid rgba(201,147,58,0.1);margin-bottom:2rem;}
+.footer-brand{font-family:var(--font-ornament);font-size:0.85rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--pale-gold);margin-bottom:1rem;}
+.footer-tag{font-size:0.9rem;line-height:1.8;color:rgba(245,237,216,0.4);max-width:300px;}
+.footer-col h4{font-family:var(--font-ornament);font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.footer-col ul{list-style:none;}
+.footer-col li{font-size:0.88rem;color:rgba(245,237,216,0.45);padding:0.3rem 0;transition:color 0.2s;}
+.footer-col li:hover{color:rgba(245,237,216,0.8);}
+.footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-family:var(--font-ornament);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,237,216,0.25);}
+.footer-addr{font-size:0.8rem;color:rgba(245,237,216,0.25);text-align:right;}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+@media(max-width:900px){
+nav{padding:1rem 1.5rem;}
+.nav-links{display:none;}
+.hero{grid-template-columns:1fr;min-height:auto;padding-top:5rem;}
+.hero-left{padding:4rem 2rem 3rem;}
+.hero-right{padding:2rem;min-height:300px;}
+.hero-emblem{width:260px;height:260px;}
+.story-inner,.feature-inner,.visit-inner{grid-template-columns:1fr;gap:3rem;padding:0 1.5rem;}
+.flavors-wheel{grid-template-columns:1fr 1fr;}
+.flavor-cell:nth-child(2n){border-right:none;}
+.flavor-cell:nth-child(3n){border-right:1px solid var(--border);}
+.dish-grid{grid-template-columns:1fr 1fr;}
+.reviews-grid{grid-template-columns:1fr;}
+.glossary-header{grid-template-columns:1fr;gap:1.5rem;}
+.glossary-grid{grid-template-columns:1fr;}
+.glossary-item{border-right:none;}
+.glossary-item:nth-last-child(-n+2){border-bottom:1px solid var(--border);}
+.glossary-item:last-child{border-bottom:none;}
+.footer-inner{grid-template-columns:1fr;gap:2rem;}
+.menu-header{flex-direction:column;align-items:flex-start;gap:1.5rem;}
+.education-inner,.menu-inner,.glossary-inner,.reviews-inner{padding:0 1.5rem;}
+}
+@media(max-width:600px){
+.dish-grid,.flavors-wheel{grid-template-columns:1fr;}
+.flavor-cell,.flavor-cell:nth-child(3n){border-right:none;}
+.hgrid{grid-template-columns:1fr;}
+.hero-title{font-size:2.6rem;}
+.story-card-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Inlay Burmese Kitchen</div>
+  <ul class="nav-links">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#learn">Discover</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <a href="tel:+19724509999" class="nav-cta">Call Us</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-left">
+    <p class="hero-eyebrow">Authentic Myanmar Cuisine &middot; Lewisville, TX</p>
+    <h1 class="hero-title">A Hidden<br><em>Treasure</em><br>of Burma</h1>
+    <p class="hero-sub">Myanmar &middot; Since 2021</p>
+    <p class="hero-desc">Most people have never tried Burmese food. That&rsquo;s exactly why you should. Bold spices, layered broths, unexpected textures &mdash; Myanmar&rsquo;s cuisine is Southeast Asia&rsquo;s best-kept secret. Let us be your guide.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">Explore the Menu</a>
+      <a href="#learn" class="btn-ghost">Learn the Cuisine</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-emblem">
+      <div class="emblem-ring"></div>
+      <div class="emblem-ring-2"></div>
+      <div class="orbit-dot" style="top:8%;left:48%;animation-delay:0s;"></div>
+      <div class="orbit-dot" style="top:48%;right:6%;animation-delay:0.7s;"></div>
+      <div class="orbit-dot" style="bottom:8%;left:50%;animation-delay:1.4s;"></div>
+      <div class="orbit-dot" style="top:50%;left:6%;animation-delay:2.1s;"></div>
+      <div class="emblem-center">
+        <div class="emblem-icon">&#x1F3DB;&#xFE0F;</div>
+        <p style="color:var(--pale-gold);font-size:0.95rem;font-family:'Playfair Display',Georgia,serif;font-style:italic;margin-bottom:0.4rem;">Myanmar</p>
+        <p class="emblem-label">The Golden Land</p>
+        <div style="margin:1rem 0;width:40px;height:1px;background:rgba(201,147,58,0.4);"></div>
+        <p style="font-size:0.75rem;color:rgba(245,237,216,0.5);font-family:'Lora',Georgia,serif;line-height:1.5;">Authentic flavors<br>from Inle Lake</p>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Discover</span><div class="scroll-arrow"></div></div>
+</section>
+
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-left">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">From the Shores of<br><em>Inle Lake</em></h2>
+      <div class="story-body">
+        <p>Inlay Burmese Kitchen takes its name from Inle Lake in the Shan State of Myanmar &mdash; a shimmering mountain lake known for its floating gardens, leg-rowing fishermen, and one of the country&rsquo;s most distinctive regional cuisines.</p>
+        <p>We brought those flavors to Lewisville, Texas. Every dish is crafted fresh, with locally sourced ingredients and spice blends rooted in generations of Burmese cooking tradition.</p>
+        <p>No experience with Burmese food required. Our friendly staff will walk you through anything on the menu &mdash; just ask.</p>
+      </div>
+      <div class="story-stat-row">
+        <div class="story-stat"><div class="num">4.6&#x2605;</div><div class="lbl">Average Rating</div></div>
+        <div class="story-stat"><div class="num">250+</div><div class="lbl">Guest Reviews</div></div>
+        <div class="story-stat"><div class="num">40+</div><div class="lbl">Menu Items</div></div>
+      </div>
+    </div>
+    <div class="story-right reveal">
+      <div class="story-card-grid">
+        <div class="story-card" data-n="1"><div class="story-card-icon">&#x1F33F;</div><h3>Farm Fresh</h3><p>Locally sourced ingredients combined with imported Burmese spices you won&rsquo;t find anywhere else in DFW.</p></div>
+        <div class="story-card" data-n="2"><div class="story-card-icon">&#x1F468;&#x200D;&#x1F373;</div><h3>Family Recipes</h3><p>Every dish follows time-honored recipes from Myanmar. Nothing is rushed. Everything is cooked to order.</p></div>
+        <div class="story-card" data-n="3"><div class="story-card-icon">&#x1F5FA;&#xFE0F;</div><h3>Guided Discovery</h3><p>First time? Our staff will guide you through every dish and recommend their favorites with genuine warmth.</p></div>
+        <div class="story-card" data-n="4"><div class="story-card-icon">&#x1F343;</div><h3>Bold &amp; Layered</h3><p>Burmese food balances fermented, sour, spicy, and umami in ways that surprise and reward the curious palate.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="education" id="learn">
+  <div class="education-inner">
+    <div class="education-header reveal">
+      <p class="section-label">Discover Burmese Cuisine</p>
+      <h2 class="section-title">What Makes<br><em>Myanmar&rsquo;s Food</em><br>Unforgettable</h2>
+      <p>Burmese cuisine sits at the crossroads of India, China, and Southeast Asia &mdash; yet tastes like none of them. It developed in relative isolation, producing flavor combinations that feel both ancient and revelatory.</p>
+    </div>
+    <div class="flavors-wheel reveal">
+      <div class="flavor-cell"><div class="flavor-icon">&#x1F343;</div><div class="flavor-name">Fermented Tea Leaf</div><div class="flavor-sub">Lahpet &middot; The National Ingredient</div><p class="flavor-desc">The soul of Burmese cuisine. Fermented green tea leaves tossed with fried garlic, toasted nuts, dried shrimp, and lime. Sour, savory, bitter, crunchy &mdash; all at once. Nothing else tastes like it on earth.</p></div>
+      <div class="flavor-cell"><div class="flavor-icon">&#x1F965;</div><div class="flavor-name">Coconut Broths</div><div class="flavor-sub">Ohn No Khao Swe</div><p class="flavor-desc">Rich, golden, fragrant &mdash; Burmese coconut soups are layered with turmeric, lemongrass, and fish sauce. Silky, warming, and utterly unlike Thai or Indian coconut curries.</p></div>
+      <div class="flavor-cell"><div class="flavor-icon">&#x1F336;&#xFE0F;</div><div class="flavor-name">Dry Curries</div><div class="flavor-sub">Si Byan &middot; Oil Returns</div><p class="flavor-desc">Burmese curries are oil-based, drier, and deeply caramelized. The &ldquo;oil returns&rdquo; technique coaxes umami depth from tomatoes, onions, and spices cooked low and slow.</p></div>
+      <div class="flavor-cell"><div class="flavor-icon">&#x1F9C6;</div><div class="flavor-name">Shan Tofu</div><div class="flavor-sub">Chickpea Curd &middot; Not Soy</div><p class="flavor-desc">Made from chickpea flour, giving it a silkier, nuttier character. Golden fried, it becomes crisp outside and custard-soft inside. A revelation for anyone who thinks they don&rsquo;t like tofu.</p></div>
+      <div class="flavor-cell"><div class="flavor-icon">&#x1F34B;</div><div class="flavor-name">Sour Notes</div><div class="flavor-sub">Chin &middot; The Brightener</div><p class="flavor-desc">Tamarind, lime, and fermented pastes thread sourness through Burmese cooking the way salt threads through Western cuisine. It lifts rich curries and gives salads their electric quality.</p></div>
+      <div class="flavor-cell"><div class="flavor-icon">&#x1FAD8;</div><div class="flavor-name">Legume Depth</div><div class="flavor-sub">Pe Gyaw &middot; Split Peas</div><p class="flavor-desc">Split peas, yellow lentils, and dried beans appear everywhere &mdash; fried crisp as garnish, simmered into soups, or ground into noodles. They add earthy body that makes Burmese food so satisfying.</p></div>
+    </div>
+    <div class="divider-ornament reveal"><span>&#x2736;</span></div>
+    <div class="table-note reveal">
+      <p class="section-label" style="display:flex;justify-content:center;">The Burmese Table</p>
+      <h2 class="section-title">How a Meal <em>Works</em></h2>
+      <p>In Myanmar, meals are served all at once &mdash; not in courses. A main curry arrives alongside multiple sides: a clear soup, pickled vegetables, a raw salad, steamed rice, and condiments. Everything is meant to be mixed and balanced at the table. Come hungry. Come curious.</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu-sec" id="menu">
+  <div class="menu-inner">
+    <div class="menu-header">
+      <div>
+        <p class="section-label">The Kitchen</p>
+        <h2 class="section-title">Signature <em>Dishes</em></h2>
+      </div>
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-cat="all">All</button>
+        <button class="tab-btn" data-cat="starters">Starters</button>
+        <button class="tab-btn" data-cat="mains">Mains</button>
+        <button class="tab-btn" data-cat="salads">Salads</button>
+        <button class="tab-btn" data-cat="noodles">Noodles</button>
+      </div>
+    </div>
+    <div class="dish-grid">
+      <div class="dish-card visible" data-cat="starters"><div class="dish-card-accent"></div><div class="dish-num">01 &mdash; Starter</div><h3 class="dish-name">Tea Leaf Salad</h3><p class="dish-burmese">Lahpet Thoke</p><p class="dish-desc">Myanmar&rsquo;s national dish. Fermented green tea leaves hand-tossed with twelve textures: fried garlic, sesame, sunflower seeds, peanuts, shrimp, tomato, cabbage, and lime. Each bite is a different experience.</p><div class="dish-tags"><span class="tag">Iconic</span><span class="tag">Fermented</span><span class="tag">Must-Try</span></div></div>
+      <div class="dish-card visible" data-cat="starters"><div class="dish-card-accent"></div><div class="dish-num">02 &mdash; Starter</div><h3 class="dish-name">Golden Fried Shan Tofu</h3><p class="dish-burmese">Tohu Kyaw</p><p class="dish-desc">Chickpea-based Shan tofu, golden-fried to a crisp shell with a silky, custard-soft center. Served with bright sweet-chili sauce. The sweet chili is &ldquo;literally perfect&rdquo; according to our guests.</p><div class="dish-tags"><span class="tag">Vegetarian</span><span class="tag">Crispy</span><span class="tag">Unique</span></div></div>
+      <div class="dish-card visible" data-cat="starters"><div class="dish-card-accent"></div><div class="dish-num">03 &mdash; Starter</div><h3 class="dish-name">Burmese Samosa</h3><p class="dish-burmese">Samosa Thoke</p><p class="dish-desc">A Burmese riff on the Indian classic &mdash; generously filled with spiced potato, far more satisfying than a typical all-beef version. Crisp, hearty, and perfect with tamarind chutney.</p><div class="dish-tags"><span class="tag">Vegetarian</span><span class="tag">Hearty</span></div></div>
+      <div class="dish-card visible" data-cat="starters"><div class="dish-card-accent"></div><div class="dish-num">04 &mdash; Starter</div><h3 class="dish-name">Lemongrass Prawn</h3><p class="dish-burmese">Pazun Hin</p><p class="dish-desc">Plump prawns fragrant with lemongrass, galangal, and kaffir lime. Light, aromatic, and bright &mdash; showcasing how Burmese cooking handles seafood with elegance rather than heaviness.</p><div class="dish-tags"><span class="tag">Seafood</span><span class="tag">Aromatic</span></div></div>
+      <div class="dish-card visible" data-cat="mains"><div class="dish-card-accent"></div><div class="dish-num">05 &mdash; Main</div><h3 class="dish-name">Chili Lamb</h3><p class="dish-burmese">Seik Thar Hin</p><p class="dish-desc">Tender lamb in bold, brick-red chili gravy with whole spices. Deeply spiced but not blisteringly hot. A signature that keeps guests returning &mdash; the kind of dish that stays with you long after the meal.</p><div class="dish-tags"><span class="tag">Spicy</span><span class="tag">Bold</span><span class="tag">Fan Favorite</span></div></div>
+      <div class="dish-card visible" data-cat="mains"><div class="dish-card-accent"></div><div class="dish-num">06 &mdash; Main</div><h3 class="dish-name">Pumpkin Chicken Stew</h3><p class="dish-burmese">Thee Kwa Hin</p><p class="dish-desc">Kabocha pumpkin melting into a golden, turmeric-tinged broth with bone-in chicken. Sweet, savory, and deeply comforting. The ideal first Burmese dish for the curious beginner.</p><div class="dish-tags"><span class="tag">Comfort</span><span class="tag">Mild</span><span class="tag">Beginner-Friendly</span></div></div>
+      <div class="dish-card visible" data-cat="mains"><div class="dish-card-accent"></div><div class="dish-num">07 &mdash; Main</div><h3 class="dish-name">Pork Belly &amp; Mustard Greens</h3><p class="dish-burmese">Wet Thar Hin Nway</p><p class="dish-desc">Slow-braised pork belly rendered impossibly tender, paired with bitter fermented mustard greens that cut through the richness. The interplay of fat and brine is textbook Burmese technique.</p><div class="dish-tags"><span class="tag">Rich</span><span class="tag">Slow-Cooked</span><span class="tag">Umami</span></div></div>
+      <div class="dish-card visible" data-cat="mains"><div class="dish-card-accent"></div><div class="dish-num">08 &mdash; Main</div><h3 class="dish-name">Basil Chicken</h3><p class="dish-burmese">Kyet Thar Hin</p><p class="dish-desc">Wok-tossed chicken with fresh basil, oyster sauce, and dried chilies. Simple on paper &mdash; electric in execution. Wok hei char gives every bite a subtle, irresistible smokiness.</p><div class="dish-tags"><span class="tag">Wok-Fired</span><span class="tag">Aromatic</span></div></div>
+      <div class="dish-card visible" data-cat="salads"><div class="dish-card-accent"></div><div class="dish-num">09 &mdash; Salad</div><h3 class="dish-name">Spicy Mango Salad</h3><p class="dish-burmese">Thayet Thoke</p><p class="dish-desc">Shredded green mango tossed with dried shrimp, peanuts, lime, chile, and fish sauce. Sweet, tart, savory, and fiery simultaneously. One of the most complete flavor profiles in a single bowl.</p><div class="dish-tags"><span class="tag">Sour</span><span class="tag">Refreshing</span><span class="tag">Spicy</span></div></div>
+      <div class="dish-card visible" data-cat="salads"><div class="dish-card-accent"></div><div class="dish-num">10 &mdash; Salad</div><h3 class="dish-name">Adam Tea Leaf Salad</h3><p class="dish-burmese">Lahpet Thoke Special</p><p class="dish-desc">The house take on the classic &mdash; with apple slices adding unexpected sweetness that balances the fermented tea&rsquo;s bitterness. The salad that converts skeptics into obsessives.</p><div class="dish-tags"><span class="tag">House Special</span><span class="tag">Iconic</span></div></div>
+      <div class="dish-card visible" data-cat="noodles"><div class="dish-card-accent"></div><div class="dish-num">11 &mdash; Noodles</div><h3 class="dish-name">Coconut Noodle Soup</h3><p class="dish-burmese">Ohn No Khao Swe</p><p class="dish-desc">Egg noodles in rich golden coconut-chicken broth spiced with turmeric and fish sauce. Topped with crispy noodles, hard-boiled egg, and lime. Myanmar&rsquo;s most celebrated noodle dish.</p><div class="dish-tags"><span class="tag">National Dish</span><span class="tag">Rich</span><span class="tag">Warming</span></div></div>
+      <div class="dish-card visible" data-cat="noodles"><div class="dish-card-accent"></div><div class="dish-num">12 &mdash; Noodles</div><h3 class="dish-name">Myeik Pan Fried Noodles</h3><p class="dish-burmese">Myeik Khauk Swe Kyaw</p><p class="dish-desc">Thick rice noodles wok-fried in savory sauce with vegetables and choice of protein &mdash; southern Burmese port-city style with Chinese-Malay influence. Smoky, slippery, and deeply satisfying.</p><div class="dish-tags"><span class="tag">Wok-Fried</span><span class="tag">Regional</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="glossary" id="glossary">
+  <div class="glossary-inner">
+    <div class="glossary-header">
+      <div class="reveal">
+        <p class="section-label">Learn the Language</p>
+        <h2 class="section-title">Burmese Kitchen<br><em>Glossary</em></h2>
+      </div>
+      <div class="reveal">
+        <p class="glossary-intro">You don&rsquo;t need to know any of this to enjoy the food &mdash; but knowing a little changes everything. These are the building blocks of Myanmar&rsquo;s culinary vocabulary. Use them to ask better questions when you visit.</p>
+      </div>
+    </div>
+    <div class="glossary-grid">
+      <div class="glossary-item reveal"><div class="glossary-term">Lahpet</div><div class="glossary-pron">Pronunciation: &ldquo;Lah-peh&rdquo;</div><p class="glossary-def">Fermented tea leaves &mdash; the defining ingredient of Burmese cuisine. In Myanmar, lahpet symbolizes reconciliation; it was traditionally exchanged to end disputes between families. Served as a salad, snack, and gift.</p></div>
+      <div class="glossary-item reveal"><div class="glossary-term">Mohinga</div><div class="glossary-pron">Pronunciation: &ldquo;Mo-hin-gah&rdquo;</div><p class="glossary-def">Myanmar&rsquo;s national dish and the country&rsquo;s most common breakfast: rice vermicelli in rich fish-and-lemongrass broth topped with crispy fritters. Every family and region makes it differently &mdash; a point of fierce regional pride.</p></div>
+      <div class="glossary-item reveal"><div class="glossary-term">Palatha</div><div class="glossary-pron">Pronunciation: &ldquo;Pa-lah-tah&rdquo;</div><p class="glossary-def">A flaky, layered flatbread descended from Indian paratha but evolved into something entirely Burmese &mdash; butterier, more delicate, and griddle-cooked until blistered and golden. Multiple guests have called it the best bread they&rsquo;ve ever eaten.</p></div>
+      <div class="glossary-item reveal"><div class="glossary-term">Ngapi</div><div class="glossary-pron">Pronunciation: &ldquo;Nga-pee&rdquo;</div><p class="glossary-def">Fermented fish or shrimp paste &mdash; the backbone of Burmese savory cooking, used like salt and anchovy paste combined. Funky, intense, and completely transformed by cooking. The umami bedrock beneath every great Burmese dish.</p></div>
+      <div class="glossary-item reveal"><div class="glossary-term">Thoke</div><div class="glossary-pron">Pronunciation: &ldquo;Thoh-kay&rdquo;</div><p class="glossary-def">The Burmese word for &ldquo;salad&rdquo; &mdash; though Burmese salads bear no resemblance to Western ones. They are hand-tossed, highly seasoned, layered with textures, and often served warm or at room temperature.</p></div>
+      <div class="glossary-item reveal"><div class="glossary-term">Si Byan</div><div class="glossary-pron">Pronunciation: &ldquo;See-Byan&rdquo;</div><p class="glossary-def">Literally &ldquo;oil returns&rdquo; &mdash; the moment when oil separates from the sauce during curry cooking, signaling the onions, tomatoes, and spices have fully caramelized. The foundation of every great Burmese curry.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="feature-inner">
+    <div class="feature-visual reveal">
+      <div class="feature-box">
+        <div class="fcorner tl"></div><div class="fcorner tr"></div>
+        <div class="fcorner bl"></div><div class="fcorner br"></div>
+        <blockquote class="feature-quote">&ldquo;Think of a mix between a buttery croissant and the best tortilla you&rsquo;ve ever eaten. It absolutely crushes naan bread in a head-to-head battle.&rdquo;</blockquote>
+        <p class="feature-attr">&mdash; Tim C., Verified Guest Review</p>
+      </div>
+      <div style="margin-top:2rem;padding:1.5rem 2rem;background:rgba(201,147,58,0.06);border:1px solid rgba(201,147,58,0.15);">
+        <p class="section-label" style="color:var(--pale-gold);margin-bottom:0.75rem;">Also Don&rsquo;t Miss</p>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;">
+          <div style="display:flex;justify-content:space-between;font-size:0.88rem;color:rgba(245,237,216,0.7);padding:0.35rem 0;border-bottom:1px solid rgba(201,147,58,0.08);"><span>Biryani Chicken Rice</span><span style="color:var(--gold);">Herb-layered</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:0.88rem;color:rgba(245,237,216,0.7);padding:0.35rem 0;border-bottom:1px solid rgba(201,147,58,0.08);"><span>Coconut Rice</span><span style="color:var(--gold);">Fragrant base</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:0.88rem;color:rgba(245,237,216,0.7);padding:0.35rem 0;"><span>Burmese Milk Tea</span><span style="color:var(--gold);">Condensed + evaporated</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="feature-text reveal">
+      <p class="section-label">The Bread</p>
+      <h2 class="section-title">Order the<br><em>Palatha</em></h2>
+      <div class="feature-body">
+        <p>If there is one thing every first-time guest must order, it is the Palatha. Descended from Indian paratha but distinctly Burmese in execution &mdash; flaky, buttery, blistered on a hot griddle.</p>
+        <p>It tears like a croissant. It folds like a flatbread. It pairs with everything: curries, tea leaf salad, even a cup of Burmese milk tea. Multiple guests have called it the best bread they&rsquo;ve ever eaten.</p>
+        <p>Pair it with the Pumpkin Chicken Stew for a beginner-perfect combination. Or dip it into the Chili Lamb gravy if you&rsquo;re feeling bold.</p>
+      </div>
+      <div class="spotlight">
+        <div class="sitem"><div class="sitem-icon">&#x1FAD3;</div><div><div class="sitem-name">Palatha</div><div class="sitem-desc">Multi-layered Burmese flatbread, griddle-cooked to order</div></div></div>
+        <div class="sitem"><div class="sitem-icon">&#x1F35A;</div><div><div class="sitem-name">Biryani Chicken Rice</div><div class="sitem-desc">Long-grain rice layered with saffron, herbs, and whole spices</div></div></div>
+        <div class="sitem"><div class="sitem-icon">&#x1F965;</div><div><div class="sitem-name">Coconut Rice</div><div class="sitem-desc">Fragrant, lightly sweet &mdash; the classic pairing for spiced curries</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header reveal">
+      <p class="section-label">What Guests Say</p>
+      <h2 class="section-title">Voices from the <em>Table</em></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal"><div class="review-accent"></div><div class="review-stars"><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span></div><p class="review-text">&ldquo;The food was simply outstanding, with each dish being unique and bursting with flavor. Not a single item disappointed us. The fish wrapped in banana leaf &mdash; so delicious! The staff went above and beyond.&rdquo;</p><div class="review-author"><div class="author-av">S</div><div><div class="author-name">Shafia A.</div><div class="author-src">Verified Guest</div></div></div></div>
+      <div class="review-card reveal"><div class="review-accent"></div><div class="review-stars"><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span></div><p class="review-text">&ldquo;Holy smokes! The palatha absolutely crushes naan bread in a 1v1 battle. Think a mix between a buttery croissant and the best tortilla you&rsquo;ve ever eaten. 10/10 will be eating here again.&rdquo;</p><div class="review-author"><div class="author-av">T</div><div><div class="author-name">Tim C.</div><div class="author-src">Verified Guest</div></div></div></div>
+      <div class="review-card reveal"><div class="review-accent"></div><div class="review-stars"><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span><span class="star">&#x2605;</span></div><p class="review-text">&ldquo;Familiarity with Burmese food is not required &mdash; the team is happy to assist. Super friendly and informative about all the dishes. A local gem you absolutely owe it to yourself to visit.&rdquo;</p><div class="review-author"><div class="author-av">C</div><div><div class="author-name">Cameron M.</div><div class="author-src">Verified Guest</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div class="visit-info reveal">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-title">Come Visit<br><em>Lewisville</em></h2>
+      <div class="vdetail"><div class="vdetail-icon">&#x1F4CD;</div><div><div class="vdetail-label">Address</div><div class="vdetail-value">2449 S Stemmons Fwy, Suite 700<br>Lewisville, TX 75067<br><span style="color:rgba(201,147,58,0.6);font-size:0.82rem;">Near I-35 &middot; Ample free parking</span></div></div></div>
+      <div class="vdetail"><div class="vdetail-icon">&#x1F550;</div><div><div class="vdetail-label">Hours</div><div class="hgrid" style="margin-top:0.5rem;"><div class="hrow"><span class="hday">Monday</span><span>Closed</span></div><div class="hrow"><span class="hday">Tuesday</span><span>11am &ndash; 9pm</span></div><div class="hrow"><span class="hday">Wednesday</span><span>11am &ndash; 9pm</span></div><div class="hrow"><span class="hday">Thursday</span><span>11am &ndash; 9pm</span></div><div class="hrow"><span class="hday">Friday</span><span>11am &ndash; 9:30pm</span></div><div class="hrow"><span class="hday">Saturday</span><span>11am &ndash; 9:30pm</span></div><div class="hrow" style="border-bottom:none;"><span class="hday">Sunday</span><span>11am &ndash; 9pm</span></div></div></div></div>
+      <div class="vdetail"><div class="vdetail-icon">&#x260E;&#xFE0F;</div><div><div class="vdetail-label">Contact</div><div class="vdetail-value"><a href="tel:+19724509999" style="color:var(--pale-gold);">(972) 450-9999</a><br><span style="font-size:0.82rem;color:rgba(245,237,216,0.4);">Walk-ins welcome &middot; No reservation needed</span></div></div></div>
+      <div class="vdetail"><div class="vdetail-icon">&#x1F697;</div><div><div class="vdetail-label">Options</div><div class="vdetail-value">Dine-In &middot; Takeout &middot; Delivery Available</div></div></div>
+    </div>
+    <div class="visit-map reveal">
+      <div class="map-frame"><div class="map-ph"><span class="pin">&#x1F4CD;</span><p>Inlay Burmese Kitchen</p><p style="margin-top:0.3rem;color:rgba(201,147,58,0.4);">Lewisville, TX 75067</p></div></div>
+      <a href="https://maps.google.com/?q=2449+S+Stemmons+Fwy+Lewisville+TX" target="_blank" class="map-link">Open in Google Maps &rarr;</a>
+      <div style="padding:2rem;background:rgba(45,21,16,0.5);border:1px solid rgba(201,147,58,0.12);">
+        <p class="section-label" style="color:var(--pale-gold);margin-bottom:1rem;">Before You Go</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+          <li style="font-size:0.88rem;color:rgba(245,237,216,0.6);display:flex;gap:0.75rem;"><span style="color:var(--gold);">&#x2736;</span>No reservation required &mdash; walk in anytime</li>
+          <li style="font-size:0.88rem;color:rgba(245,237,216,0.6);display:flex;gap:0.75rem;"><span style="color:var(--gold);">&#x2736;</span>Tell the staff it&rsquo;s your first time &mdash; they&rsquo;ll guide you</li>
+          <li style="font-size:0.88rem;color:rgba(245,237,216,0.6);display:flex;gap:0.75rem;"><span style="color:var(--gold);">&#x2736;</span>Order the Tea Leaf Salad. Non-negotiable.</li>
+          <li style="font-size:0.88rem;color:rgba(245,237,216,0.6);display:flex;gap:0.75rem;"><span style="color:var(--gold);">&#x2736;</span>Order more than you think &mdash; portions are generous</li>
+          <li style="font-size:0.88rem;color:rgba(245,237,216,0.6);display:flex;gap:0.75rem;"><span style="color:var(--gold);">&#x2736;</span>Family-friendly &middot; All major cards accepted</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Inlay Burmese Kitchen</div>
+      <p class="footer-tag">Authentic Myanmar cuisine from the shores of Inle Lake, served in the heart of Lewisville, Texas. No experience required &mdash; just curiosity and an appetite.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#learn">Discover the Cuisine</a></li>
+        <li><a href="#menu">Signature Dishes</a></li>
+        <li><a href="#glossary">Kitchen Glossary</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/inlayburmesekitchen/" target="_blank">Facebook</a></li>
+        <li><a href="tel:+19724509999">(972) 450-9999</a></li>
+        <li>Dine-In Available</li>
+        <li>Takeout Available</li>
+        <li>Delivery Available</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Inlay Burmese Kitchen &middot; Lewisville, TX</p>
+    <p class="footer-addr">2449 S Stemmons Fwy &middot; Lewisville, TX 75067</p>
+  </div>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab-btn');
+const cards = document.querySelectorAll('.dish-card');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const cat = tab.dataset.cat;
+    cards.forEach(card => {
+      card.classList.toggle('visible', cat === 'all' || card.dataset.cat === cat);
+    });
+  });
+});
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal'));
+    const idx = siblings.indexOf(entry.target);
+    entry.target.style.transitionDelay = (idx * 0.08) + 's';
+    entry.target.classList.add('in-view');
+    obs.unobserve(entry.target);
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => obs.observe(el));
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.style.background = window.scrollY > 60 ? 'rgba(26,15,10,0.97)' : 'rgba(26,15,10,0.85)';
+}, { passive: true });
+const emblem = document.querySelector('.hero-emblem');
+if (emblem) {
+  window.addEventListener('mousemove', e => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 12;
+    const y = (e.clientY / window.innerHeight - 0.5) * 12;
+    emblem.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+  }, { passive: true });
+}
+</script>
+</body>
+</html>
