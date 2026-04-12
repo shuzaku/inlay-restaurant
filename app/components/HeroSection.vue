@@ -1,32 +1,11 @@
 <script setup lang="ts">
+import heroImage from '~~/assets/images/hero.jpg'
+
 const foodRef = ref<HTMLElement | null>(null)
 const bgRef = ref<HTMLElement | null>(null)
 
 useParallax(bgRef, 0.25)
 useParallax(foodRef, 0.08)
-
-const ingredients = [
-  {
-    url: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&q=80',
-    label: 'Fermented Tea',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=300&q=80',
-    label: 'Lemongrass',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1596097635121-14b38c5d7a60?w=300&q=80',
-    label: 'Turmeric',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&q=80',
-    label: 'Coconut',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1587735243475-37a3b3f1db86?w=300&q=80',
-    label: 'Tamarind',
-  },
-]
 </script>
 
 <template>
@@ -64,6 +43,7 @@ const ingredients = [
         <div
           ref="foodRef"
           class="hero-food parallax-img"
+          :style="{ backgroundImage: `url(${heroImage})` }"
         />
         <!-- Left-side gradient bleed into the dark text area -->
         <div class="hero-food-fade" />
@@ -72,22 +52,6 @@ const ingredients = [
           <span class="food-label-line" />
           <span class="food-label-text">Tea Leaf Salad &mdash; Lahpet Thoke</span>
         </div>
-      </div>
-    </div>
-
-    <!-- Ingredient strip -->
-    <div class="ingredient-strip">
-      <div
-        v-for="(ing, i) in ingredients"
-        :key="ing.label"
-        class="ingredient-pill"
-        :style="{ animationDelay: `${1 + i * 0.15}s` }"
-      >
-        <div
-          class="ingredient-img"
-          :style="{ backgroundImage: `url(${ing.url})` }"
-        />
-        <span class="ingredient-label">{{ ing.label }}</span>
       </div>
     </div>
 
@@ -103,7 +67,7 @@ const ingredients = [
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr;
   position: relative;
   overflow: hidden;
 }
@@ -220,8 +184,6 @@ const ingredients = [
 .hero-food {
   position: absolute;
   inset: 0;
-  /* Vibrant overhead shot of tea leaf salad — jewel-toned, rich colors */
-  background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1400&q=95');
   background-size: cover;
   background-position: center center;
 }
@@ -265,48 +227,6 @@ const ingredients = [
   white-space: nowrap;
 }
 
-/* Ingredient strip — spans full bottom width, breaks out of the column grid */
-.ingredient-strip {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem 6rem;
-  background: rgba(26,15,10,0.6);
-  backdrop-filter: blur(8px);
-  border-top: 1px solid rgba(201,147,58,0.2);
-  position: relative;
-  z-index: 3;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.ingredient-strip::-webkit-scrollbar { display: none; }
-
-.ingredient-pill {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-shrink: 0;
-  animation: slideInRight 0.6s ease both;
-}
-.ingredient-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid rgba(201,147,58,0.35);
-  flex-shrink: 0;
-}
-.ingredient-label {
-  font-family: var(--font-ornament);
-  font-size: 0.58rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(245,237,216,0.55);
-  white-space: nowrap;
-}
-
 .scroll-hint {
   position: absolute;
   bottom: 5rem;
@@ -334,7 +254,7 @@ const ingredients = [
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 50vw auto;
+    grid-template-rows: 1fr 50vw;
   }
   .hero-left { padding: 7rem 2rem 3rem; }
   .hero-right {
@@ -354,7 +274,6 @@ const ingredients = [
     );
   }
   .hero-food-label { bottom: 2rem; left: 1.5rem; }
-  .ingredient-strip { padding: 1.25rem 1.5rem; }
   .scroll-hint { bottom: 6rem; }
 }
 @media (max-width: 600px) {

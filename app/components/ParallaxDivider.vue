@@ -8,10 +8,9 @@ defineProps<{
 
 <template>
   <div class="parallax-divider">
-    <div
-      class="pd-bg"
-      :style="{ backgroundImage: `url(${image})` }"
-    />
+    <div class="pd-bg">
+      <img class="pd-bg-img" :src="image" alt="" loading="lazy" decoding="async" />
+    </div>
     <div class="pd-overlay" />
     <div class="pd-content">
       <div class="pd-ornament">&#x2736;</div>
@@ -37,13 +36,19 @@ defineProps<{
   justify-content: center;
 }
 
-/* Fixed parallax background */
+/* Cover image (img avoids background-attachment:fixed bugs with overflow-x:hidden / Safari) */
 .pd-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  overflow: hidden;
+}
+.pd-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .pd-overlay {
@@ -86,6 +91,5 @@ defineProps<{
 
 @media (max-width: 600px) {
   .parallax-divider { height: 50vh; }
-  .pd-bg { background-attachment: scroll; } /* fixed attachment can glitch on iOS */
 }
 </style>

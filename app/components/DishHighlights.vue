@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import teaSaladImg from '~~/assets/images/tea-salad.jpg'
+import coconutNoodleImg from '~~/assets/images/coconut-noodle.jpg'
+import palathaImg from '~~/assets/images/palatha.jpg'
+
 const photo1Ref = ref<HTMLElement | null>(null)
 const photo2Ref = ref<HTMLElement | null>(null)
 const photo3Ref = ref<HTMLElement | null>(null)
@@ -11,22 +15,31 @@ const dishes = [
   {
     name: 'Tea Leaf Salad',
     line: 'Twelve textures. One bowl. Nothing else like it on earth.',
-    url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&q=90',
+    url: teaSaladImg,
     anchor: '#menu',
+    backgroundPosition: '38% 70%',
   },
   {
     name: 'Coconut Noodle Soup',
     line: 'Golden, silky, warming — the bowl you\'ll be thinking about on the drive home.',
-    url: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1200&q=90',
+    url: coconutNoodleImg,
     anchor: '#menu',
   },
   {
     name: 'Palatha',
     line: 'Flaky, buttery, griddle-cooked to order. Order it with everything.',
-    url: 'https://images.unsplash.com/photo-1574484284002-952d92456975?w=1200&q=90',
+    url: palathaImg,
     anchor: '#menu',
+    backgroundPosition: '38% 70%',
   },
 ]
+
+function hlPhotoStyle(dish: (typeof dishes)[number]) {
+  return {
+    backgroundImage: `url(${dish.url})`,
+    ...(dish.backgroundPosition && { backgroundPosition: dish.backgroundPosition }),
+  }
+}
 </script>
 
 <template>
@@ -43,7 +56,7 @@ const dishes = [
         <div
           ref="photo1Ref"
           class="hl-photo parallax-img"
-          :style="{ backgroundImage: `url(${dishes[0].url})` }"
+          :style="hlPhotoStyle(dishes[0])"
         />
         <div class="hl-photo-tint" />
       </div>
@@ -67,7 +80,7 @@ const dishes = [
         <div
           ref="photo2Ref"
           class="hl-photo parallax-img"
-          :style="{ backgroundImage: `url(${dishes[1].url})` }"
+          :style="hlPhotoStyle(dishes[1])"
         />
         <div class="hl-photo-tint hl-photo-tint--r" />
       </div>
@@ -79,7 +92,7 @@ const dishes = [
         <div
           ref="photo3Ref"
           class="hl-photo parallax-img"
-          :style="{ backgroundImage: `url(${dishes[2].url})` }"
+          :style="hlPhotoStyle(dishes[2])"
         />
         <div class="hl-photo-tint" />
       </div>
@@ -127,9 +140,10 @@ const dishes = [
   position: relative;
   overflow: hidden;
 }
+/* Slight inset bleed so parallax translateY doesn’t reveal empty band inside .hl-photo-wrap */
 .hl-photo {
   position: absolute;
-  inset: -15%;
+  inset: -12%;
   background-size: cover;
   background-position: center;
 }
@@ -238,9 +252,18 @@ const dishes = [
   .hl-panel--ltr,
   .hl-panel--rtl {
     grid-template-columns: 1fr;
+    min-height: unset;
+    align-content: start;
   }
   .hl-panel--rtl {
-    direction: ltr; /* reset so photo comes first on mobile too */
+    direction: ltr;
+  }
+  /* DOM is copy → photo; on mobile show photo first like other panels */
+  .hl-panel--rtl .hl-photo-wrap {
+    order: 1;
+  }
+  .hl-panel--rtl .hl-copy {
+    order: 2;
   }
   .hl-photo-wrap { height: 55vw; min-height: 260px; }
   .hl-copy,

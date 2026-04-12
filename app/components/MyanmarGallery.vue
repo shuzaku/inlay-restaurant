@@ -14,7 +14,7 @@ const panels = [
     sub: 'Shan State · Myanmar',
   },
   {
-    url: 'https://images.unsplash.com/photo-1570197571499-166b36f5c6f7?w=900&q=85',
+    url: 'https://images.unsplash.com/photo-1702226580087-a416fe3e145a?w=900&q=85',
     label: 'Ancient Pagodas',
     sub: 'Bagan · 11th Century',
   },
@@ -34,8 +34,9 @@ const panels = [
         <div
           ref="panel1Ref"
           class="panel-bg parallax-img"
-          :style="{ backgroundImage: `url(${panels[0].url})` }"
-        />
+        >
+          <img class="panel-bg-img" :src="panels[0].url" alt="" loading="lazy" decoding="async" />
+        </div>
         <div class="panel-overlay" />
         <div class="panel-info">
           <div class="panel-label">{{ panels[0].label }}</div>
@@ -46,8 +47,9 @@ const panels = [
         <div
           ref="panel2Ref"
           class="panel-bg parallax-img"
-          :style="{ backgroundImage: `url(${panels[1].url})` }"
-        />
+        >
+          <img class="panel-bg-img" :src="panels[1].url" alt="" loading="lazy" decoding="async" />
+        </div>
         <div class="panel-overlay" />
         <div class="panel-info">
           <div class="panel-label">{{ panels[1].label }}</div>
@@ -58,8 +60,9 @@ const panels = [
         <div
           ref="panel3Ref"
           class="panel-bg parallax-img"
-          :style="{ backgroundImage: `url(${panels[2].url})` }"
-        />
+        >
+          <img class="panel-bg-img" :src="panels[2].url" alt="" loading="lazy" decoding="async" />
+        </div>
         <div class="panel-overlay" />
         <div class="panel-info">
           <div class="panel-label">{{ panels[2].label }}</div>
@@ -74,9 +77,6 @@ const panels = [
       <h2 class="gallery-headline">The Golden Land <em>&middot; Myanmar</em></h2>
       <p class="gallery-caption">Where every meal tells a thousand years of story</p>
     </div>
-
-    <!-- Diagonal bottom cut -->
-    <div class="gallery-cut" />
   </div>
 </template>
 
@@ -127,15 +127,24 @@ const panels = [
 .panel-bg {
   position: absolute;
   inset: -20%;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   transition: transform 0.1s linear;
+}
+.panel-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
 }
 
 .panel-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  background-color: rgba(26, 15, 10, 0.2);
+  background-image: linear-gradient(
     to top,
     rgba(26,15,10,0.75) 0%,
     rgba(26,15,10,0.2) 50%,
@@ -204,18 +213,6 @@ const panels = [
   font-style: italic;
   color: rgba(245,237,216,0.7);
   text-shadow: 0 1px 12px rgba(26,15,10,0.9);
-}
-
-/* Diagonal bottom edge */
-.gallery-cut {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: var(--warm-white);
-  clip-path: polygon(0 100%, 100% 100%, 100% 0);
-  z-index: 5;
 }
 
 @media (max-width: 900px) {

@@ -3,7 +3,7 @@ const imgRef = ref<HTMLElement | null>(null)
 useParallax(imgRef, 0.12)
 
 const cards = [
-  { n: '1', icon: '🌿', title: 'Farm Fresh', body: "Locally sourced ingredients combined with imported Burmese spices you won't find anywhere else in DFW." },
+  { n: '1', icon: '🌿', title: 'Sourced Daily', body: "Ingredients sourced daily, paired with imported Burmese spices you won't find anywhere else in DFW." },
   { n: '2', icon: '👨‍🍳', title: 'Family Recipes', body: 'Every dish follows time-honored recipes from Myanmar. Nothing is rushed. Everything is cooked to order.' },
   { n: '3', icon: '🗺️', title: 'Guided Discovery', body: 'First time? Our staff will guide you through every dish and recommend their favorites with genuine warmth.' },
   { n: '4', icon: '🤝', title: 'Come As You Are', body: "No dress code, no reservations, no prior knowledge required. Walk in, sit down, and let us take care of you." },
@@ -190,7 +190,6 @@ const cards = [
 /* Horizontal scrolling card strip */
 .story-cards-strip {
   margin-top: 4rem;
-  padding-bottom: 4rem;
   overflow: hidden;
 }
 .strip-track {

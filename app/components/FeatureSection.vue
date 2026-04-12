@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import palathaImg from '~~/assets/images/palatha.jpg'
+
 const photoRef = ref<HTMLElement | null>(null)
 useParallax(photoRef, 0.1)
 </script>
@@ -12,6 +14,7 @@ useParallax(photoRef, 0.1)
           <div
             ref="photoRef"
             class="feature-photo parallax-img"
+            :style="{ backgroundImage: `url(${palathaImg})` }"
           />
           <div class="feature-photo-overlay" />
         </div>
@@ -96,7 +99,6 @@ useParallax(photoRef, 0.1)
 .feature-photo {
   position: absolute;
   inset: -15%;
-  background-image: url('https://images.unsplash.com/photo-1574484284002-952d92456975?w=900&q=85');
   background-size: cover;
   background-position: center;
 }

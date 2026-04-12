@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import garlicRiceImg from '~~/assets/images/garlic-rice.jpg'
+
 useReveal()
 </script>
 
@@ -11,7 +13,7 @@ useReveal()
     <DishHighlights />
     <MenuSection />
     <ParallaxDivider
-      image="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1600&q=85"
+      :image="garlicRiceImg"
       quote="&ldquo;Every dish tells a story of the land, the people, and a thousand years of tradition. Burmese cuisine is Southeast Asia&rsquo;s greatest undiscovered treasure.&rdquo;"
       attr="— On Myanmar's Culinary Heritage"
     />
