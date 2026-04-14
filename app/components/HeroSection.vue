@@ -24,7 +24,7 @@ useParallax(foodRef, 0.08)
 
     <div class="hero-left">
       <p class="hero-eyebrow">Authentic Myanmar Cuisine &middot; Lewisville, TX</p>
-      <h1 class="hero-title">A Hidden<br><em>Treasure</em>of Burma</h1>
+      <h1 class="hero-title">A Hidden<br><em>Treasure</em> of Burma</h1>
       <p class="hero-sub">Myanmar &middot; Since 2021</p>
       <p class="hero-desc">
         Most people have never tried Burmese food. That&rsquo;s exactly why you should.
@@ -33,7 +33,7 @@ useParallax(foodRef, 0.08)
       </p>
       <div class="hero-actions">
         <a href="#menu" class="btn-primary">Explore the Menu</a>
-        <a href="#learn" class="btn-ghost">Learn the Cuisine</a>
+        <a href="#glossary" class="btn-ghost">Learn the Cuisine</a>
       </div>
     </div>
 
@@ -54,6 +54,9 @@ useParallax(foodRef, 0.08)
         </div>
       </div>
     </div>
+
+    <!-- Logo watermark — absolute, doesn't affect layout -->
+    <img src="/images/logo.png" alt="Inlay Burmese Kitchen" class="hero-logo" />
 
     <div class="scroll-hint">
       <span>Discover</span>
@@ -113,6 +116,19 @@ useParallax(foodRef, 0.08)
   opacity: 0.05;
   z-index: 2;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9933a'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-logo {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  width: 200px;
+  height: auto;
+  filter: invert(1) brightness(1);
+  opacity: 0.55;
+  z-index: 4;
+  animation: fadeIn 1.2s ease 0.8s both;
+  pointer-events: none;
 }
 
 .hero-left {
@@ -192,12 +208,16 @@ useParallax(foodRef, 0.08)
 .hero-food-fade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(26,15,10,0.85) 0%,
-    rgba(26,15,10,0.3) 20%,
-    transparent 45%
-  );
+  background:
+    /* overall darkening layer */
+    rgba(26,15,10,0.45),
+    /* left-edge bleed into text side */
+    linear-gradient(
+      to right,
+      rgba(26,15,10,0.85) 0%,
+      rgba(26,15,10,0.3) 20%,
+      transparent 45%
+    );
   pointer-events: none;
 }
 

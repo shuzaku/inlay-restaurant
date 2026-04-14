@@ -47,8 +47,8 @@ const cards = [
           />
           <div class="story-photo-overlay" />
           <div class="story-photo-badge">
-            <span class="badge-icon">&#x1F3A3;</span>
-            <span class="badge-text">Inle Lake Fishermen</span>
+            <span class="badge-icon">&#x1F373;</span>
+            <span class="badge-text">Family Kitchen &middot; Since 2021</span>
           </div>
         </div>
       </div>
@@ -63,7 +63,6 @@ const cards = [
           class="story-card reveal"
           :data-n="card.n"
         >
-          <div class="story-card-icon">{{ card.icon }}</div>
           <h3>{{ card.title }}</h3>
           <p>{{ card.body }}</p>
         </div>
@@ -225,7 +224,6 @@ const cards = [
   line-height: 1;
   pointer-events: none;
 }
-.story-card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
 .story-card h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;

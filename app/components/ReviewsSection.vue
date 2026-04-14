@@ -123,34 +123,24 @@ const reviews = [
   color: var(--muted);
 }
 
-/* Horizontal carousel — full-bleed scroll with snap */
+/* Centered wrapping grid */
 .reviews-carousel {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow: hidden;
+  width: 100%;
 }
 .carousel-track {
   display: flex;
-  gap: 1px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  padding: 0 calc((100vw - 1200px) / 2 + 3rem);
-  padding-bottom: 1rem;
-  background: var(--border);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
-.carousel-track::-webkit-scrollbar { display: none; }
 
 .review-card {
   background: var(--warm-white);
   padding: 2.5rem 2rem;
   position: relative;
-  flex: 0 0 360px;
-  scroll-snap-align: start;
+  flex: 0 0 340px;
+  max-width: 340px;
+  border: 1px solid var(--border);
 }
 .review-stars { display: flex; gap: 0.2rem; margin-bottom: 1.2rem; }
 .star { color: var(--gold); font-size: 0.9rem; }
@@ -170,7 +160,6 @@ const reviews = [
 
 @media (max-width: 900px) {
   .reviews-inner { padding: 0 1.5rem; }
-  .carousel-track { padding: 0 1.5rem 1rem; }
-  .review-card { flex: 0 0 290px; }
+  .review-card { flex: 0 0 100%; max-width: 100%; }
 }
 </style>

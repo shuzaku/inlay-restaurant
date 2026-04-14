@@ -4,19 +4,19 @@ const terms = [
     term: 'Lahpet',
     pron: '"Lah-peh"',
     def: "Fermented tea leaves — you'll find them in our Tea Leaf Salad, and once you try it, you'll wonder why it isn't on every menu in the country.",
-    img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=200&q=80',
+    img: '/images/tea-salad.jpg',
   },
   {
     term: 'Thoke',
     pron: '"Thoh-kay"',
     def: 'Burmese for "salad" — but nothing like a Western salad. Hand-tossed, warm, layered with crunch, heat, and tang all at once.',
-    img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&q=80',
+    img: '/images/adam-tea.jpg',
   },
   {
     term: 'Palatha',
     pron: '"Pa-lah-tah"',
     def: 'Our griddle-cooked flatbread — flaky, buttery, and built for tearing. Order one. Then order another.',
-    img: 'https://images.unsplash.com/photo-1574484284002-952d92456975?w=200&q=80',
+    img: '/images/palatha.jpg',
   },
 ]
 </script>

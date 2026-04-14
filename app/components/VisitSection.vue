@@ -19,15 +19,15 @@ const tips = [
 
 const photoStrip = [
   {
-    url: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85',
+    url:"/images/spread.jpg",
     label: 'Fine Dining Experience',
   },
   {
-    url: 'https://images.unsplash.com/photo-1552566626-52f8b828329a?w=700&q=85',
+    url:"/images/umbrella.jpg",    
     label: 'Welcoming Atmosphere',
   },
   {
-    url: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=85',
+    url:"/images/fresh.jpg",    
     label: 'Fresh Every Day',
   },
 ]

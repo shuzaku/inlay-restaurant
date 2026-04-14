@@ -2,7 +2,7 @@
   <footer>
     <div class="footer-inner">
       <div>
-        <div class="footer-brand">Inlay Burmese Kitchen</div>
+        <img src="/images/logo.png" alt="Inlay Burmese Kitchen" class="footer-logo" />
         <p class="footer-tag">Authentic Myanmar cuisine from the shores of Inle Lake, served in the heart of Lewisville, Texas. No experience required &mdash; just curiosity and an appetite.</p>
       </div>
       <div class="footer-col">
@@ -49,7 +49,13 @@ footer {
   border-bottom: 1px solid rgba(201,147,58,0.1);
   margin-bottom: 2rem;
 }
-.footer-brand { font-family: var(--font-ornament); font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--pale-gold); margin-bottom: 1rem; }
+.footer-logo {
+  height: 120px;
+  width: auto;
+  margin-bottom: 1.25rem;
+  display: block;
+  filter: invert(1) sepia(1) saturate(1.6) hue-rotate(5deg) brightness(0.88);
+}
 .footer-tag { font-size: 0.9rem; line-height: 1.8; color: rgba(245,237,216,0.4); max-width: 300px; }
 .footer-col h4 { font-family: var(--font-ornament); font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
 .footer-col ul { list-style: none; }

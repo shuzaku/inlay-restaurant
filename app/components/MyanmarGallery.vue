@@ -19,9 +19,9 @@ const panels = [
     sub: 'Bagan · 11th Century',
   },
   {
-    url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85',
-    label: 'Street Kitchen',
-    sub: 'Yangon · Daily Life',
+    url: '/images/fresh.jpg',
+    label: 'Bold, Layered & Unlike Anything Else',
+    sub: 'The flavors of Myanmar',
   },
 ]
 </script>
