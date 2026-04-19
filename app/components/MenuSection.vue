@@ -266,6 +266,13 @@ const visibleDishes = computed(() =>
           </div>
         </div>
       </div>
+
+      <div class="menu-cta">
+        <a href="/menu.pdf" target="_blank" rel="noopener" class="full-menu-btn">
+          <span class="full-menu-btn__label">See Entire Menu</span>
+          <span class="full-menu-btn__arrow">↗</span>
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -467,6 +474,55 @@ const visibleDishes = computed(() =>
 }
 .dish-card:hover .dish-card-accent {
   height: 100%;
+}
+
+.menu-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.full-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-ornament);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.35s;
+}
+.full-menu-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.full-menu-btn:hover::before {
+  transform: scaleX(1);
+}
+.full-menu-btn:hover {
+  color: var(--ink);
+}
+.full-menu-btn__label,
+.full-menu-btn__arrow {
+  position: relative;
+  z-index: 1;
+}
+.full-menu-btn__arrow {
+  font-size: 1rem;
+  transition: transform 0.25s;
+}
+.full-menu-btn:hover .full-menu-btn__arrow {
+  transform: translate(3px, -3px);
 }
 
 @media (max-width: 900px) {
